@@ -1,0 +1,22 @@
+{
+  "name": "weather_app",
+  "homepage": "https://github.com/thuongho/freeweather",
+  "authors": [
+    "Thuong Ho <thuong.t.ho@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.1",
+    "bootstrap": "^3.3.6"
+  }
+}
