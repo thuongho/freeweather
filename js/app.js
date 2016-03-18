@@ -1,8 +1,9 @@
 (function(){
   'use strict';
 
-  var weatherApp = angular.module('app', []);
+  var weatherApp = angular.module('app', ['ngRoute']);
 
+  // ROUTING
   weatherApp.config(function($routeProvider) {
   	$routeProvider
   		.when("/", {
@@ -10,7 +11,20 @@
   			controller: "MainCtrl"
   		})
   });
-  weatherApp.controller('MainCtrl', ['$scope', function($scope) {
+
+  // SERVICES
+  weatherApp.factory('WeatherAPI', ['$http', function ($http) {
+    var getWeather = function() {
+
+    };
+  
+    return {
+      getWeather: getWeather
+    };
+  }]);
+
+  // CONTROLLERS
+  weatherApp.controller('MainCtrl', ['$scope', 'WeatherAPI', function($scope, WeatherAPI) {
   $scope.greeting = 'Hola!';
 }]);
   
